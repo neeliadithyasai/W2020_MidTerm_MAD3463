@@ -5,7 +5,6 @@
  */
 package com.lambton;
 
-import javax.print.DocFlavor;
 import java.util.HashMap;
 
 /**
@@ -51,28 +50,47 @@ public class LambtonStringTools
     }
 
     //3 - FIND MOST FREQUENT CHARACTER FROM STRING
-    public static String mostFrequent(String s)
+    public static char[] mostFrequent(String s)
     {
 
-        return null;
+            char temp[] = s.toCharArray();
 
+            HashMap<Character, Integer> frequentLetters = new HashMap<Character, Integer>();
+
+            for (int i = 0; i < s.length(); i++) {
+                if (frequentLetters.containsKey(temp[i])) {
+                    int tempValue = frequentLetters.get(temp[i]);
+                    tempValue++;
+                    frequentLetters.put(temp[i], tempValue);
+                } else {
+                    frequentLetters.put(temp[i], 1);
+                }
+            }
+            return null;
 
     }
 
     //4 - CONVERT BINARY NUMBER TO DECIMALS
     public static int binaryToDecimal(String s)
     {
+        int decimal=0;
 
+        decimal = Integer.parseInt(s, 2);
 
+        return decimal;
 
-
-        return 0;
     }
 
     //5 - REPLACING SUBSTRING WITH NEW STRING IN EXISTING STRING
     public static String replaceSubString(String originalString, String findString, String newString)
     {
-
-        return null;
+        originalString= originalString.toLowerCase();
+        findString = findString.toLowerCase();
+        newString = newString.toLowerCase();
+        if (originalString.contains(findString)) {
+            originalString = originalString.replace(findString, newString);
+            return originalString;
+        } else
+            return "String doesn't contain matched pattern";
     }
 }
