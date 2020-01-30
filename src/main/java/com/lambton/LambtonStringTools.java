@@ -21,14 +21,15 @@ public class LambtonStringTools
         else {
 
 
-            String n[]= s.split("\\s+");
-            String temp=" ";
-            for (int i=n.length-1;i>0;i--)
+            String n[] = s.split("\\s+");
+            String temp = " ";
+            for (int i = n.length - 1; i > 0; i--)
             {
-                temp=temp+n[i]+" ";
+                temp = temp + n[i] + " ";
             }
+        }
 
-        return null;
+        return temp;
     }
 
 
