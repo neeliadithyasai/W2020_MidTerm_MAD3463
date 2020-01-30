@@ -42,8 +42,8 @@ public class LambtonStringTools
         String capital = "";
         if (word.length == 3) {
             capital = word[0].substring(0, 1).toUpperCase() + ". "
-
-
+                    + word[1].substring(0, 1).toUpperCase() + ". "
+                    + word[2].substring(0, 1).toUpperCase() + word[2].substring(1).toLowerCase();
         } else {
             capital = null;
         }
