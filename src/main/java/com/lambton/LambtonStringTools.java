@@ -53,19 +53,7 @@ public class LambtonStringTools
     public static char[] mostFrequent(String s)
     {
 
-            char temp[] = s.toCharArray();
 
-            HashMap<Character, Integer> frequentLetters = new HashMap<Character, Integer>();
-
-            for (int i = 0; i < s.length(); i++) {
-                if (frequentLetters.containsKey(temp[i])) {
-                    int tempValue = frequentLetters.get(temp[i]);
-                    tempValue++;
-                    frequentLetters.put(temp[i], tempValue);
-                } else {
-                    frequentLetters.put(temp[i], 1);
-                }
-            }
             return null;
 
     }
